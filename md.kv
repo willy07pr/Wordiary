@@ -526,6 +526,12 @@ ScreenManager:
         on_press:
             root.manager.current = root.submit()
             root.clear()
+    MDFlatButton:
+        text: 'LUPA PIN'
+        pos_hint: {'center_x':0.2, 'y':0.4}
+        on_press:
+            root.manager.current = root.lupapin()
+            root.clear()
     MDIconButton:
         icon: "arrow-left"
         pos_hint: {"center_x":0.075, "y":0.925}
