@@ -10,10 +10,11 @@ class VerifyDiary(Screen):
 
     pin = ObjectProperty(None)
     print("PIN :", db.verifypin())
+    index = ''
 
     def submit(self):
         if self.pin.text == self.changepin(): #cek pin
-            return 'diary' #pindah ke diary jika benar
+            return 'diary'
         else:
             invalidpin = MDDialog(text='PIN salah',
                                   size_hint=(0.6,0.2))
@@ -23,6 +24,9 @@ class VerifyDiary(Screen):
     def changepin(self): #memanggil pin dari database untuk pengecekan
         check_pin = db.verifypin()
         return check_pin
+
+    def changeindex(self,indexs):
+        self.index = indexs
 
     def clear(self):
         self.pin.text = '' #bersihkan pin setelah selesai
