@@ -167,7 +167,7 @@ class Database:
             return None
         else:
             #jika listpin sudah terisi return nilai pin tsb
-            return listpin[0][1]
+            return listpin[0][0]
 
     def deletepin(self):
         self.cursor.execute("delete from pin") #hapus pin
