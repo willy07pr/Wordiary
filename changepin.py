@@ -14,6 +14,7 @@ class GantiPINScreen(Screen):
     def ganti(self):
         #jika pin yang diisi sesuai
         if VerifyDiary().changepin() == self.pin.text:
+            self.manager.get_screen('buatpin').fill()
             self.pin.text = ''
             return 'buatpin' #pindah ke screen buat pin
         #jika pin yang diisi tidak sesuai
