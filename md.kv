@@ -384,13 +384,15 @@ ScreenManager:
     name: 'buatpin'
     newpin: newpin
     confirmpin: confirmpin
+    pertanyaan: pertanyaan
+    jawaban: jawaban
     MDTextField:
         id: newpin
         hint_text: "Masukkan PIN"
         helper_text: "masukkan minimal 4 digit angka"
         helper_text_mode: "on_focus"
         password: True
-        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        pos_hint: {'center_x': 0.5, 'center_y': 0.75}
         size_hint_x:None
         width:300
         halign: 'center'
@@ -398,6 +400,24 @@ ScreenManager:
         id: confirmpin
         hint_text: "Konfirmasi PIN"
         helper_text: "harap konfirmasi pin anda"
+        helper_text_mode: "on_focus"
+        password: True
+        pos_hint: {'center_x': 0.5, 'center_y': 0.65}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDTextField:
+        id: pertanyaan
+        hint_text: "Buat pertanyaan lupa pin"
+        helper_text: "Contoh : Berapakah jumlah mantan saya?"
+        helper_text_mode: "on_focus"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDTextField:
+        id: jawaban
+        hint_text: "Buat jawaban dari pertanyaan di atas"
         helper_text_mode: "on_focus"
         password: True
         pos_hint: {'center_x': 0.5, 'center_y': 0.45}
