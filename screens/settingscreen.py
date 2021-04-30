@@ -41,3 +41,6 @@ class SettingScreen(Screen):
                                     size_hint=(0.7, 0.2))
             belumbuatpin.open()
             return 'settings' #tetap di screen pengaturan bila pin belum ada
+
+    def lupapin(self):
+        self.manager.get_screen('lupapin').showpertanyaan()
