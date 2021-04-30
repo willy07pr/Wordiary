@@ -1,0 +1,557 @@
+ScreenManager:
+    MainScreen:
+    WordScreen:
+    SongReferences:
+    DiaryScreen:
+    HistoryScreen:
+    ResultScreen:
+    SettingScreen:
+    BuatPINScreen:
+    GantiPINScreen:
+    HapusPINScreen:
+    VerifyDiary:
+    VerifyHistory:
+
+<MainScreen>:
+    name: 'main'
+    MDToolbar:
+        id: toolbar
+        title: 'Wordiary'
+        pos_hint: {"top":1}
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+        elevation:0
+        md_bg_color: (0,0,0,0)
+    NavigationLayout:
+        x: toolbar.height
+        ScreenManager:
+            id: sm
+            Screen:
+                MDLabel:
+                    text: 'Bagaimana harimu'
+                    theme_text_color: 'Primary'
+                    font_size: 25
+                    pos_hint: {'center_x':0.5, 'center_y':0.65}
+                    halign: 'center'
+                MDFloatingActionButton:
+                    icon: "emoticon-sad"
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {'center_x':0.4,'center_y':0.5}
+                    on_release:
+                        root.output1()
+                        root.manager.transition.direction = "left"
+                        root.manager.current = 'word'
+                MDFloatingActionButton:
+                    icon: "emoticon-angry"
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {'center_x':0.6,'center_y':0.5}
+                    on_release:
+                        root.output2()
+                        root.manager.transition.direction = "left"
+                        root.manager.current = 'word'
+                MDFloatingActionButton:
+                    icon: "emoticon-dead"
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {'center_x':0.4,'center_y':0.4}
+                    on_release:
+                        root.output3()
+                        root.manager.transition.direction = "left"
+                        root.manager.current = 'word'
+                MDFloatingActionButton:
+                    icon: "heart-broken"
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {'center_x':0.6,'center_y':0.4}
+                    on_release:
+                        root.output4()
+                        root.manager.transition.direction = "left"
+                        root.manager.current = 'word'
+                MDLabel:
+                    text: 'Wordiary'
+                    theme_text_color: "Hint"
+                    pos_hint: {'center_x':0.5, 'center_y':0.1}
+                    font_size: 15
+                    halign: "center"
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                sm: root.manager
+                nav_drawer: nav_drawer
+                orientation: 'vertical'
+                padding: "8dp"
+                spacing: "8dp"
+
+<WordScreen>:
+    name: 'word'
+    wordtext: wordtext
+    MDLabel:
+        id: wordtext
+        text: ''
+        italic: True
+        halign: 'center'
+        theme_text_color: "Primary"
+    MDRectangleFlatButton:
+        text: 'Write your day'
+        pos_hint: {'center_x':0.5,'center_y':0.3}
+        on_release:
+            root.manager.transition.direction = "up"
+            root.manager.current = root.writebtn()
+    MDRectangleFlatButton:
+        text: 'Song References'
+        pos_hint: {'center_x':0.5,'center_y':0.225}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = 'reflagu'
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = 'main'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+<SongReferences>:
+    name: 'reflagu'
+    textlagu: textlagu
+    MDToolbar:
+        id: toolbar
+        title: 'Song References'
+        pos_hint: {"top":1}
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+        elevation:0
+        md_bg_color: (0,0,0,0)
+    NavigationLayout:
+        x: toolbar.height
+        ScreenManager:
+            Screen:
+                MDLabel:
+                    text: "Here's Song Recommendation For You:"
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x":0.5, "center_y":0.6}
+                    halign: "center"
+                MDLabel:
+                    id: textlagu
+                    text: ''
+                    theme_text_color: 'Primary'
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                    halign: "center"
+                    font_size: 25
+                MDRectangleFlatButton:
+                    text: 'Listen'
+                    pos_hint: {'center_x':0.5, 'center_y':0.375}
+                    on_press: root.song()
+                MDLabel:
+                    text: 'Wordiary'
+                    theme_text_color: "Hint"
+                    pos_hint: {'center_x':0.5, 'center_y':0.1}
+                    font_size: 15
+                    halign: "center"
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                sm: root.manager
+                nav_drawer: nav_drawer
+                orientation: 'vertical'
+                padding: "8dp"
+                spacing: "8dp"
+
+<DiaryScreen>:
+    name: 'diary'
+    diary: diary
+    date: date
+    title: title
+    FloatLayout:
+        MDLabel:
+            text: "Date :"
+            theme_text_color: 'Primary'
+            pos_hint: {"center_x":0.25, "center_y":0.9625}
+            halign: "center"
+        MDLabel:
+            text: "Title :"
+            theme_text_color: 'Primary'
+            pos_hint: {"center_x":0.25, "center_y":0.9025}
+            halign: "center"
+        TextInput:
+            id: date
+            multiline: False
+            #hint_text: 'dd-mm-yyyy'
+            size_hint: 0.65, 0.05
+            pos_hint: {"center_x":0.65, "center_y":0.965}
+        TextInput:
+            id: title
+            multiline: False
+            size_hint: 0.65, 0.05
+            pos_hint: {"center_x":0.65, "center_y":0.905}
+        TextInput:
+            id: diary
+            multiline: True
+            size_hint: 0.95, 0.855
+            pos_hint: {"center_x":0.5, "center_y":0.4425}
+        MDFillRoundFlatIconButton:
+            icon: "plus-circle"
+            text: 'Save'
+            pos_hint: {'center_x':0.5, 'y':0.05}
+            on_release:
+                root.save()
+
+    MDIconButton:
+        icon: "home-outline"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'main'
+
+<ContentNavigationDrawer>:
+    ScrollView:
+        MDList:
+            OneLineListItem:
+                text: "Home"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.sm.transition.direction = "left"
+                    root.sm.current = 'main'
+            OneLineListItem:
+                text: "Diary"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.sm.transition.direction = "left"
+                    root.sm.current = root.diary()
+            OneLineListItem:
+                text: "History"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.sm.transition.direction = "left"
+                    root.sm.current = root.history()
+            OneLineListItem:
+                text: "Settings"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.sm.transition.direction = "left"
+                    root.sm.current = 'settings'
+            OneLineListItem:
+                text: "About Us"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.aboutus()
+
+<HistoryScreen>:
+    name: 'history'
+    searchdate: searchdate
+    MDToolbar:
+        id: toolbar
+        title: 'History'
+        pos_hint: {"top":1}
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+        elevation:0
+        md_bg_color: (0,0,0,0)
+    NavigationLayout:
+        x: toolbar.height
+        ScreenManager:
+            id: sm
+            Screen:
+                MDLabel:
+                    text: 'Cari diary-mu berdasarkan tanggal'
+                    theme_text_color: "Primary"
+                    pos_hint: {'center_x':0.5, 'center_y':0.6}
+                    halign: 'center'
+                MDTextField:
+                    id: searchdate
+                    hint_text: "Masukkan tanggal disini"
+                    helper_text: "Gunakan format dd-mm-yyyy"
+                    helper_text_mode: "on_focus"
+                    pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+                    size_hint_x:None
+                    width:300
+                MDFlatButton:
+                    text: 'SEARCH'
+                    pos_hint: {'center_x':0.8, 'y':0.4}
+                    on_press:
+                        root.search()
+                        root.manager.transition.direction = "left"
+                        root.manager.current = root.datechecking()
+                MDLabel:
+                    text: 'Wordiary'
+                    theme_text_color: "Hint"
+                    pos_hint: {'center_x':0.5, 'center_y':0.1}
+                    font_size: 15
+                    halign: "center"
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                sm: root.manager
+                nav_drawer: nav_drawer
+                orientation: 'vertical'
+                padding: "8dp"
+                spacing: "8dp"
+
+<ResultScreen>:
+    name: 'resultscreen'
+    diarytext: diarytext
+    title: title
+    BoxLayout:
+        orientation: "vertical"
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_x":0.075, "y":0.925}
+            on_release:
+                root.clear()
+                root.manager.transition.direction = "right"
+                root.manager.current = 'history'
+        MDLabel:
+            id: title
+            text: ''
+            font_size: 20
+            size_hint_y: 0.1
+            theme_text_color: "Primary"
+            halign: "left"
+            valign: "top"
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDLabel:
+                id: diarytext
+                text: ''
+                theme_text_color: "Primary"
+                pos_hint: {"center_x":0.5}
+                size_hint_y: None
+                size: self.texture_size
+                halign: "left"
+                valign: "top"
+        MDFloatingActionButton:
+            icon: "pencil"
+            md_bg_color: app.theme_cls.primary_color
+            pos_hint: {"center_x":0.85, "center_y":0.075}
+            on_press:
+                root.edit()
+                root.manager.transition.direction = "up"
+                root.manager.current = 'diary'
+
+<SettingScreen>:
+    name: 'settings'
+    MDToolbar:
+        id: toolbar
+        title: 'Settings'
+        pos_hint: {"top":1}
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+        elevation:0
+        md_bg_color: (0,0,0,0)
+    NavigationLayout:
+        x: toolbar.height
+        ScreenManager:
+            Screen:
+                name: 'settingutama'
+                MDList:
+                    pos_hint: {"top": 0.9}
+                    OneLineListItem:
+                        text: "Buat PIN"
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = root.buatpin()
+                    OneLineListItem:
+                        text: "Ganti PIN"
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = root.gantipin()
+                    OneLineListItem:
+                        text: "Hapus PIN"
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = root.hapuspin()
+                MDLabel:
+                    text: 'Wordiary'
+                    theme_text_color: "Hint"
+                    pos_hint: {'center_x':0.5, 'center_y':0.1}
+                    font_size: 15
+                    halign: "center"
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                sm: root.manager
+                nav_drawer: nav_drawer
+                orientation: 'vertical'
+                padding: "8dp"
+                spacing: "8dp"
+
+<BuatPINScreen>:
+    name: 'buatpin'
+    newpin: newpin
+    confirmpin: confirmpin
+    MDTextField:
+        id: newpin
+        hint_text: "Masukkan PIN"
+        helper_text: "masukkan minimal 4 digit angka"
+        helper_text_mode: "on_focus"
+        password: True
+        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDTextField:
+        id: confirmpin
+        hint_text: "Konfirmasi PIN"
+        helper_text: "harap konfirmasi pin anda"
+        helper_text_mode: "on_focus"
+        password: True
+        pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDFlatButton:
+        text: 'SIMPAN'
+        pos_hint: {"center_x":0.8, "y":0.35}
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.current = root.savepin()
+            root.clear()
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'settings'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+<GantiPINScreen>:
+    name: 'gantipin'
+    pin: pin
+    MDTextField:
+        id: pin
+        hint_text: "Masukkan PIN Anda"
+        password: True
+        pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDFlatButton:
+        text: 'GANTI PIN'
+        pos_hint: {'center_x':0.8, 'y':0.4}
+        on_press:
+            root.manager.current = root.ganti()
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'settings'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+<HapusPINScreen>:
+    name: 'hapuspin'
+    pin: pin
+    MDTextField:
+        id: pin
+        hint_text: "Masukkan PIN Anda"
+        password: True
+        pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDFlatButton:
+        text: 'OKE'
+        pos_hint: {'center_x':0.8, 'y':0.4}
+        on_press:
+            root.manager.transition.direction = "right"
+            root.manager.current = root.hapus()
+            root.clear()
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'settings'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+<VerifyDiary>:
+    name: 'verifydiary'
+    pin: pin
+    MDTextField:
+        id: pin
+        hint_text: "Masukkan PIN Anda"
+        helper_text: "atau klik lupa pin"
+        helper_text_mode: "on_focus"
+        password: True
+        pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDFlatButton:
+        text: 'OKE'
+        pos_hint: {'center_x':0.8, 'y':0.4}
+        on_press:
+            root.manager.current = root.submit()
+            root.clear()
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'main'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+<VerifyHistory>:
+    name: 'verifyhistory'
+    pin: pin
+    MDTextField:
+        id: pin
+        hint_text: "Masukkan PIN Anda"
+        helper_text: "atau klik lupa pin"
+        helper_text_mode: "on_focus"
+        password: True
+        pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+        size_hint_x:None
+        width:300
+        halign: 'center'
+    MDFlatButton:
+        text: 'OKE'
+        pos_hint: {'center_x':0.8, 'y':0.4}
+        on_press:
+            root.manager.current = root.submit()
+            root.clear()
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x":0.075, "y":0.925}
+        on_release:
+            root.clear()
+            root.manager.transition.direction = "right"
+            root.manager.current = 'main'
+    MDLabel:
+        text: 'Wordiary'
+        theme_text_color: "Hint"
+        pos_hint: {'center_x':0.5, 'center_y':0.1}
+        font_size: 15
+        halign: "center"
+
+
+#semangat gais
