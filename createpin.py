@@ -28,7 +28,8 @@ class BuatPINScreen(Screen):
                 db.addpin(self.newpin.text, self.pertanyaan.text, self.jawaban.text) #memasukkan pin ke database
                 return 'settings'
             elif self.pertanyaan.text == '' or self.jawaban.text == '':
-                peringatan = MDDialog(text='Harap buat pertanyaan dan jawaban untuk lupa pin.',size_hint=(0.7,0.2))
+                peringatan = MDDialog(text='Harap buat pertanyaan dan jawaban untuk lupa pin.',
+                                      size_hint=(0.7,0.2))
                 peringatan.open()
                 return 'buatpin'
             else: #jika pin dan konfirmasinya tidak pas/sama
@@ -37,6 +38,12 @@ class BuatPINScreen(Screen):
                 tidaksama.open()
                 return 'buatpin'
 
+    def fill(self):
+        self.pertanyaan.text = db.question()
+        self.jawaban.text = db.forget()
+
     def clear(self):
         self.newpin.text = ''
         self.confirmpin.text = ''
+        self.pertanyaan.text = ''
+        self.jawaban.text = ''
