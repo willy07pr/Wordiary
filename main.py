@@ -19,6 +19,7 @@ from createpin import BuatPINScreen
 from changepin import GantiPINScreen
 from deletepin import HapusPINScreen
 from verifypinscreen import VerifyDiary, VerifyHistory
+from lupapinscreen import LupaPin
 
 #atur ukuran/size dari window
 Window.size = (360,640)
@@ -29,6 +30,7 @@ db = Database() #sambungkan koneksi database
 class ContentNavigationDrawer(BoxLayout):
     nav_drawer = ObjectProperty(None)
     sm = ObjectProperty(None)
+
 
     def diary(self):
         if VerifyDiary().changepin() == None:
@@ -54,7 +56,7 @@ screens = [MainScreen(name='main'), WordScreen(name='word'),
            VerifyHistory(name='verifyhistory'), ResultScreen(name='resultscreen'),
            VerifyDiary(name='verifydiary'), SongReferences(name='reflagu'),
            SettingScreen(name='settings'), BuatPINScreen(name='buatpin'),
-           GantiPINScreen(name='gantipin'), HapusPINScreen(name='hapuspin')]
+           GantiPINScreen(name='gantipin'), HapusPINScreen(name='hapuspin'), LupaPin(name='lupapin')]
 #tambahkan setiap screen ke dalam widget
 for screen in screens:
     sm.add_widget(screen)
