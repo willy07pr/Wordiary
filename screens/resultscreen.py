@@ -1,25 +1,29 @@
 from kivy.uix.screenmanager import Screen
 from kivy.properties import ObjectProperty
+from kivymd.uix.dialog import MDDialog
+from verifypinscreen import VerifyDiary
 from database import Database
 
 db = Database()
 
-#screen hasil pencarian diary
-class ResultScreen(Screen):
+#screen ganti pin
+class GantiPINScreen(Screen):
 
-    diarytext = ObjectProperty(None)
-    title = ObjectProperty(None)
+    pin = ObjectProperty(None)
 
-    def searchtext(self): #menampilkan diary yang telah dibuat sesuai tanggal yang diinput
-        self.title.text = db.searchtitle(self.manager.get_screen('history').balik())
-        self.diarytext.text = db.searchdiary(self.manager.get_screen('history').balik())
-
-    def edit(self): #pindah ke diary screen dengan mode edit
-        self.manager.get_screen('diary').showdata(self.diarytext.text,
-                                                  self.manager.get_screen('history').balik(),
-                                                  self.title.text)
+    def ganti(self):
+        #jika pin yang diisi sesuai
+        if VerifyDiary().changepin() == self.pin.text:
+            self.manager.get_screen('buatpin').fill()
+            self.pin.text = ''
+            return 'buatpin' #pindah ke screen buat pin
+        #jika pin yang diisi tidak sesuai
+        else:
+            invalidpin = MDDialog(text='PIN salah',
+                                  size_hint=(0.6, 0.2))
+            invalidpin.open()
+            self.pin.text = ''
+            return 'gantipin' #tetap di screen ganti pin
 
     def clear(self):
-        #membersihkan text pencarian
-        self.manager.get_screen('history').clear()
-
+        self.pin.text = ''
