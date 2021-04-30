@@ -10,6 +10,8 @@ class BuatPINScreen(Screen):
 
     newpin = ObjectProperty(None)
     confirmpin = ObjectProperty(None)
+    pertanyaan = ObjectProperty(None)
+    jawaban = ObjectProperty(None)
 
     def savepin(self):
         if len(self.newpin.text) < 4: #jika pin kurang dari 4 digit angka
@@ -23,7 +25,7 @@ class BuatPINScreen(Screen):
                                     size_hint=(0.6,0.2))
                 berhasil.open()
                 db.deletepin() #menghapus pin sebelumnya jika sudah ada
-                db.addpin(self.newpin.text) #memasukkan pin ke database
+                db.addpin(self.newpin.text, self.pertanyaan.text, self.jawaban.text) #memasukkan pin ke database
                 return 'settings'
             else: #jika pin dan konfirmasinya tidak pas/sama
                 tidaksama = MDDialog(text='Harap masukkan angka yang sama saat konfirmasi.',
