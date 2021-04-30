@@ -147,9 +147,9 @@ class Database:
         print(datelist)
         return datelist
 
-    def addpin(self, pin):
-        insertpin = "insert into pin values(%s, %s)"
-        recordpin = ('1', pin)
+    def addpin(self, pin, pertanyaan, jawaban):
+        insertpin = "insert into pin values(%s, %s, %s)"
+        recordpin = (pin, pertanyaan, jawaban)
         #masukkan data ke tabel pin
         self.cursor.execute(insertpin, recordpin)
         print("PIN added succesfully")
@@ -170,7 +170,7 @@ class Database:
             return listpin[0][1]
 
     def deletepin(self):
-        self.cursor.execute("delete from pin where pin='1'") #hapus pin
+        self.cursor.execute("delete from pin") #hapus pin
         self.con.commit() #simpan perubahan
 
     def close(self):
