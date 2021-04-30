@@ -173,6 +173,16 @@ class Database:
         self.cursor.execute("delete from pin") #hapus pin
         self.con.commit() #simpan perubahan
 
+    def question(self):
+        self.cursor.execute("select pertanyaan from pin")
+        question = list(self.cursor.fetchall())
+        return question[0][0]
+
+    def forget(self):
+        self.cursor.execute("select jawaban from pin")
+        answer = list(self.cursor.fetchall())
+        return answer[0][0]
+
     def close(self):
         self.con.close() #tutup koneksi database
 
