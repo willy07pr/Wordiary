@@ -29,7 +29,7 @@ ScreenManager:
             id: sm
             Screen:
                 MDLabel:
-                    text: 'Bagaimana harimu'
+                    text: 'Bagaimana harimu?'
                     theme_text_color: 'Primary'
                     font_size: 25
                     pos_hint: {'center_x':0.5, 'center_y':0.65}
@@ -368,9 +368,9 @@ ScreenManager:
                             root.manager.current = root.hapuspin()
                     OneLineListItem:
                         text: 'Lupa PIN'
-                        on_press:
-                            root.lupapin()
-                            root.manager.current = 'lupapin'
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = root.lupapin()
                 MDLabel:
                     text: 'Wordiary'
                     theme_text_color: "Hint"
@@ -393,6 +393,7 @@ ScreenManager:
     confirmpin: confirmpin
     pertanyaan: pertanyaan
     jawaban: jawaban
+    aturulang: aturulang
     MDTextField:
         id: newpin
         hint_text: "Masukkan PIN"
@@ -428,7 +429,6 @@ ScreenManager:
         text: ''
         hint_text: "Buat jawaban dari pertanyaan diatas"
         helper_text_mode: "on_focus"
-        password: True
         pos_hint: {'center_x': 0.5, 'center_y': 0.45}
         size_hint_x:None
         width:300
@@ -447,6 +447,13 @@ ScreenManager:
             root.clear()
             root.manager.transition.direction = "right"
             root.manager.current = 'settings'
+    MDLabel:
+        id: aturulang
+        text: ''
+        theme_text_color: 'Primary'
+        font_size: 20
+        pos_hint: {'x':0.085, 'center_y':0.875}
+        halign: "left"
     MDLabel:
         text: 'Wordiary'
         theme_text_color: "Hint"
@@ -613,7 +620,7 @@ ScreenManager:
         on_release:
             root.clear()
             root.manager.transition.direction = "right"
-            root.manager.current = 'verifydiary'
+            root.manager.current = 'settings'
     MDLabel:
         text: 'Wordiary'
         theme_text_color: "Hint"
