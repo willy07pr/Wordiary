@@ -43,4 +43,12 @@ class SettingScreen(Screen):
             return 'settings' #tetap di screen pengaturan bila pin belum ada
 
     def lupapin(self):
-        self.manager.get_screen('lupapin').showpertanyaan()
+        if VerifyDiary().changepin() != None:
+            self.manager.get_screen('lupapin').showpertanyaan()
+            return 'lupapin' #pindah ke screen lupa pin bila pin sudah ada
+        else:
+            belumbuatpin = MDDialog(
+                text='Anda belum membuat PIN sebelumnya.\nAnda dapat melakukan opsi Buat PIN.',
+                                    size_hint=(0.7,0.2))
+            belumbuatpin.open()
+            return 'settings' #tetap di screen pengaturan bila pin belum ada
