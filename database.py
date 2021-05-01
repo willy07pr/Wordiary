@@ -10,7 +10,7 @@ class Database:
         #sambungkan koneksi ke database server
         self.con = psy.connect(database="wordiary",
                        user="postgres",
-                       password="03312558",
+                       password="13012006",
                        host="localhost", port="5432")
         self.cursor = self.con.cursor()
         #print("Database opened successfully")
