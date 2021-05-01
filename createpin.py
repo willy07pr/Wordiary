@@ -12,6 +12,7 @@ class BuatPINScreen(Screen):
     confirmpin = ObjectProperty(None)
     pertanyaan = ObjectProperty(None)
     jawaban = ObjectProperty(None)
+    aturulang = ObjectProperty(None)
 
     def savepin(self):
         if len(self.newpin.text) < 4: #jika pin kurang dari 4 digit angka
@@ -41,9 +42,13 @@ class BuatPINScreen(Screen):
     def fill(self):
         self.pertanyaan.text = db.question()
         self.jawaban.text = db.forget()
+        self.aturulang.text = "Atur ulang PIN Anda"
 
     def clear(self):
         self.newpin.text = ''
         self.confirmpin.text = ''
+
+    def clearpertanyaan(self):
         self.pertanyaan.text = ''
         self.jawaban.text = ''
+        self.aturulang.text = ''
