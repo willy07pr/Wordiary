@@ -14,6 +14,7 @@ class HapusPINScreen(Screen):
     def hapus(self):
         #jika pin yang diisi sudah sesuai
         if self.pin.text == VerifyDiary().changepin():
+            self.manager.get_screen('buatpin').clearpertanyaan()
             db.deletepin() #menghapus pin dari database
             berhasilhapus = MDDialog(text='PIN Anda telah terhapus.',
                                      size_hint=(0.6,0.2))
@@ -22,9 +23,8 @@ class HapusPINScreen(Screen):
         else:
             invalidpin = MDDialog(text='PIN salah',
                                   size_hint=(0.6, 0.2))
-            invalidpin.open()
+            invalidpin.open() #tampilkan popup jika pin salah
             return 'hapuspin'
 
     def clear(self):
         self.pin.text = ''
-
