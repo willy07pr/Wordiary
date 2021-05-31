@@ -34,6 +34,12 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 10. Sebagai pengguna yang ingin curhat, agar dapat mencurahkan semua isi hati saya, saya dapat menggunakan fitur diary untuk menuliskan unek-unek yang saya miliki.
 
 ## Spesifikasi Teknis Lingkungan Pengembangan
+### Perangkat Keras
+* Processor     : Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz (4 CPUs), ~2.4GHz 
+* Memory        : 8192 MB RAM
+* Graphics Card : Intel(R) HD Graphics 4400
+* Storage       : 256 GB
+### Perangkat Lunak
 * Operating System        : Windows 10
 * Text Editor 			      : Pycharm Edu
 * Framework			          : Kivy, KivyMD
@@ -56,17 +62,17 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 * Fitur Kata-Kata Penyemangat
 * Fitur Referensi Lagu
 ### Fungsi CRUD
-#### * Create
+#### Create
 1. Membuat pin
 2. Membuat buku harian
-#### * Read
+#### Read
 1. Mencari riwayat buku harian
 2. Membaca kata penyemangat
 3. Membaca referensi lagu
-#### * Update
+#### Update
 1. Mengganti pin
 2. Mengedit buku harian, 
-#### * Delete
+#### Delete
 1. Menghapus pin
 2. Lupa pin
 ## Hasil Implementasi
