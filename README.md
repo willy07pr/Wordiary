@@ -6,10 +6,10 @@
 1. Indah Puspita (G64170035)
 2. Qoriatul Khairunnisa (G64170014)
 ## WiiDev-Team
-1 Ivana (G54190055) - Project Leader, Back-end Developer, UI/UX Designer
-2 Vindyani (G54190027) - Back-end Developer, UI/UX Designer
-3 Denny Muliawan Sebastian (G54190007) - Front-end Developer, UI/UX Developer
-4 Willy Pratama (G54190029) - Front-end Developer, UI/UX Developer
+1. Ivana (G54190055) - Project Leader, Back-end Developer, UI/UX Designer
+2. Vindyani (G54190027) - Back-end Developer, UI/UX Designer
+3. Denny Muliawan Sebastian (G54190007) - Front-end Developer, UI/UX Developer
+4. Willy Pratama (G54190029) - Front-end Developer, UI/UX Developer
 
 ## Deskripsi Singkat Aplikasi Wordiary
 Pada masa pandemi, stress semakin sering dialami karena khawatir berlebihan dan merasa sendirian. Oleh sebab itu, aplikasi yang memiliki tempat curhat dan penyemangat dibutuhkan oleh banyak orang. Aplikasi "Wordiary" hadir menjadi salah satu solusi masalah ini.
@@ -21,17 +21,17 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ## User Analysis
 ### User Stories
 ### Nice-to-develop
-1 Sebagai pengguna yang lupa pin, agar dapat masuk aplikasi, saya dapat menggunakan fitur lupa pin.
-2 Sebagai pengguna fitur diary, agar privasi saya terlindungi, saya dapat menetapkan nomor pin kunci aplikasi.
-3 Sebagai pengguna yang ingin melindungi mata, agar layar aplikasi yang dilihat tidak terlalu mencolok, saya dapat mengaktifkan fitur dark mode.
-4 Sebagai pengguna yang membutuhkan media yang dapat mengalihkan amarah/rasa sedih/sakit hati/pikiran negatif ketika sedang sakit, saya dapat memilih tombol emotikon yang sesuai dengan kondisi hati saya agar mendapatkan referensi lagu yang cocok untuk mengalihkan kondisi hati saya saat itu.
+1. Sebagai pengguna yang lupa pin, agar dapat masuk aplikasi, saya dapat menggunakan fitur lupa pin.
+2. Sebagai pengguna fitur diary, agar privasi saya terlindungi, saya dapat menetapkan nomor pin kunci aplikasi.
+3. Sebagai pengguna yang ingin melindungi mata, agar layar aplikasi yang dilihat tidak terlalu mencolok, saya dapat mengaktifkan fitur dark mode.
+4. Sebagai pengguna yang membutuhkan media yang dapat mengalihkan amarah/rasa sedih/sakit hati/pikiran negatif ketika sedang sakit, saya dapat memilih tombol emotikon yang sesuai dengan kondisi hati saya agar mendapatkan referensi lagu yang cocok untuk mengalihkan kondisi hati saya saat itu.
 ### Need-to-develop
-5 Sebagai pengguna yang telah membuat diary, agar dapat membaca ulang diary yang telah dibuat, saya dapat menggunakan fitur history untuk memilih tanggal penulisan diary.
-6 Sebagai pengguna yang sedang marah, agar amarah saya dapat diredam, saya dapat membuka fitur kata-kata penyemangat dengan menekan tombol emotikon 'marah'.
-7 Sebagai pengguna yang sedang sedih, agar kesedihan dapat dihibur dan semangat kembali, saya dapat memilih tombol emotikon 'sedih' pada aplikasi Wordiary.
-8 Sebagai pengguna yang sedang patah hati, saya dapat memilih tombol emotikon 'patah hati' agar dapat meringankan rasa sakit hati saya.
-9 Sebagai pengguna yang sedang sakit, saya dapat memilih tombol emotikon 'sakit' agar dapat terus memiliki mindset positif ketika sedang sakit.
-10 Sebagai pengguna yang ingin curhat, agar dapat mencurahkan semua isi hati saya, saya dapat menggunakan fitur diary untuk menuliskan unek-unek yang saya miliki.
+5. Sebagai pengguna yang telah membuat diary, agar dapat membaca ulang diary yang telah dibuat, saya dapat menggunakan fitur history untuk memilih tanggal penulisan diary.
+6. Sebagai pengguna yang sedang marah, agar amarah saya dapat diredam, saya dapat membuka fitur kata-kata penyemangat dengan menekan tombol emotikon 'marah'.
+7. Sebagai pengguna yang sedang sedih, agar kesedihan dapat dihibur dan semangat kembali, saya dapat memilih tombol emotikon 'sedih' pada aplikasi Wordiary.
+8. Sebagai pengguna yang sedang patah hati, saya dapat memilih tombol emotikon 'patah hati' agar dapat meringankan rasa sakit hati saya.
+9. Sebagai pengguna yang sedang sakit, saya dapat memilih tombol emotikon 'sakit' agar dapat terus memiliki mindset positif ketika sedang sakit.
+10. Sebagai pengguna yang ingin curhat, agar dapat mencurahkan semua isi hati saya, saya dapat menggunakan fitur diary untuk menuliskan unek-unek yang saya miliki.
 
 ## Spesifikasi Teknis Lingkungan Pengembangan
 Operating System        : Windows 10
