@@ -15,7 +15,8 @@ class BuatPINScreen(Screen):
     aturulang = ObjectProperty(None)
 
     def savepin(self):
-        if len(self.newpin.text) < 4: #jika pin kurang dari 4 digit angka
+    	#jika pin kurang dari 4 digit angka
+        if len(self.newpin.text) < 4 or not self.newpin.text.isdecimal(): 
             digitkurang = MDDialog(text='Harap masukkan minimal 4 digit angka.',
                              size_hint=(0.7,0.2))
             digitkurang.open()
