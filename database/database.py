@@ -1,4 +1,4 @@
-import psycopg2 as psy
+import sqlite3
 import random
 
 listword = [] #list untuk kata penyemangat
@@ -8,10 +8,7 @@ class Database:
 
     def __init__(self):
         #sambungkan koneksi ke database server
-        self.con = psy.connect(database="wordiary",
-                       user="postgres",
-                       password="13012006",
-                       host="localhost", port="5432")
+        self.con = sqlite3.connect("wordiary.db")
         self.cursor = self.con.cursor()
         #print("Database opened successfully")
         self.cursor.execute('select * from Word')
@@ -148,10 +145,10 @@ class Database:
         return datelist
 
     def addpin(self, pin, pertanyaan, jawaban):
-        insertpin = "insert into pin values(%s, %s, %s)"
-        recordpin = (pin, pertanyaan, jawaban)
+        insertpin = f"insert into pin values({pin!r},{pertanyaan!r},{jawaban!r})"
+        #recordpin = (pin, pertanyaan, jawaban)
         #masukkan data ke tabel pin
-        self.cursor.execute(insertpin, recordpin)
+        self.cursor.execute(insertpin)
         print("PIN added succesfully")
         self.con.commit() #simpan perubahan
 
