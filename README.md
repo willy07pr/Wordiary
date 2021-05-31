@@ -45,6 +45,7 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 
 ## Hasil dan Pembahasan
 ### Use Case Diagram
+![WhatsApp Image 2021-05-31 at 11 50 42](https://user-images.githubusercontent.com/78886557/120141328-7bf24780-c206-11eb-8ba7-a8a4b8a8e7fc.jpeg)
 ### Activity Diagram
 ![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
 ### Class Diagram
