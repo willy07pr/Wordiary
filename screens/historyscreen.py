@@ -13,11 +13,15 @@ class HistoryScreen(Screen):
     #print(datelist)
 
     def search(self):
-        if self.searchdate.text[-4:].isnumeric()==False or int(self.searchdate.text[3:5])>12:
+        if not self.searchdate.text[-4:].isnumeric() \
+                or len(self.searchdate.text)!=10 \
+                or int(self.searchdate.text[3:5])>12 \
+                or self.searchdate.text[2:6:3] != '--':
             #menampilkan popup format tanggal tidak sesuai
             format = MDDialog(text='Format tanggal tidak sesuai',
                               size_hint=(0.7,0.2))
             format.open()
+            self.clear()
         elif self.searchdate.text in self.updatedate():
             #menampilan judul dan text diary sesuai tanggal yang diinput di screen hasil pencarian
             self.manager.get_screen('resultscreen').searchtext()
@@ -25,6 +29,7 @@ class HistoryScreen(Screen):
             gaada = MDDialog(text='Data tidak ditemukan.',
                              size_hint=(0.7,0.2))
             gaada.open()
+            self.clear()
 
     def datechecking(self): #pengecekan tanggal
         if self.searchdate.text in self.updatedate():
