@@ -1,4 +1,4 @@
-ScreenManager:
+ScreenManagement:
     MainScreen:
     WordScreen:
     SongReferences:
@@ -31,37 +31,50 @@ ScreenManager:
                 MDLabel:
                     text: 'Manakah yang menggambarkan\nkondisimu saat ini?'
                     theme_text_color: 'Primary'
-                    font_size: 20
+                    font_name: "VanillaExtractRegular.ttf"
+                    font_size: 58
                     pos_hint: {'center_x':0.5, 'center_y':0.65}
                     halign: 'center'
-                MDFloatingActionButton:
-                    icon: "emoticon-sad"
-                    md_bg_color: app.theme_cls.primary_color
-                    pos_hint: {'center_x':0.4,'center_y':0.5}
+                Button:
+                    id: sad
+                    background_normal: "sad.png"
+                    background_down: "sad.png"
+                    size_hint: 0.28,0.15
+                    pos_hint: {'center_x':0.325,'center_y':0.5}
+                    on_press: root.changesize('sad')
                     on_release:
                         root.output1()
                         root.manager.transition.direction = "left"
                         root.manager.current = 'word'
-                MDFloatingActionButton:
-                    icon: "emoticon-angry"
-                    md_bg_color: app.theme_cls.primary_color
-                    pos_hint: {'center_x':0.6,'center_y':0.5}
+                Button:
+                    id: angry
+                    background_normal: "angry.png"
+                    background_down: "angry.png"
+                    size_hint: 0.28,0.15
+                    pos_hint: {'center_x':0.675,'center_y':0.5}
+                    on_press: root.changesize('angry')
                     on_release:
                         root.output2()
                         root.manager.transition.direction = "left"
                         root.manager.current = 'word'
-                MDFloatingActionButton:
-                    icon: "emoticon-dead"
-                    md_bg_color: app.theme_cls.primary_color
-                    pos_hint: {'center_x':0.4,'center_y':0.4}
+                Button:
+                    id: sick
+                    background_normal: "sick.png"
+                    background_down: "sick.png"
+                    size_hint: 0.28,0.15
+                    pos_hint: {'center_x':0.325,'center_y':0.3}
+                    on_press: root.changesize('sick')
                     on_release:
                         root.output3()
                         root.manager.transition.direction = "left"
                         root.manager.current = 'word'
-                MDFloatingActionButton:
-                    icon: "heart-broken"
-                    md_bg_color: app.theme_cls.primary_color
-                    pos_hint: {'center_x':0.6,'center_y':0.4}
+                Button:
+                    id: heart
+                    background_normal: "heart.png"
+                    background_down: "heart.png"
+                    size_hint: 0.28,0.15
+                    pos_hint: {'center_x':0.675,'center_y':0.3}
+                    on_press: root.changesize('heart')
                     on_release:
                         root.output4()
                         root.manager.transition.direction = "left"
@@ -70,7 +83,7 @@ ScreenManager:
                     text: 'Wordiary'
                     theme_text_color: "Hint"
                     pos_hint: {'center_x':0.5, 'center_y':0.1}
-                    font_size: 15
+                    font_size: 45
                     halign: "center"
 
         MDNavigationDrawer:
@@ -88,6 +101,7 @@ ScreenManager:
     MDLabel:
         id: wordtext
         text: ''
+        font_size: 50
         italic: True
         halign: 'center'
         theme_text_color: "Primary"
@@ -113,7 +127,7 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <SongReferences>:
@@ -131,9 +145,11 @@ ScreenManager:
         ScreenManager:
             Screen:
                 MDLabel:
-                    text: "Here's Song Recommendation For You:"
+                    text: "Here's Song Recommendation For You"
                     theme_text_color: 'Custom'
                     text_color: app.theme_cls.primary_color
+                    font_name: "VanillaExtractRegular.ttf"
+                    font_size: 45
                     pos_hint: {"center_x":0.5, "center_y":0.6}
                     halign: "center"
                 MDLabel:
@@ -142,17 +158,19 @@ ScreenManager:
                     theme_text_color: 'Primary'
                     pos_hint: {"center_x":0.5, "center_y":0.5}
                     halign: "center"
-                    font_size: 25
+                    font_name: "VanillaExtractRegular.ttf"
+                    font_size: 60
                 MDRectangleFlatButton:
                     text: 'Listen'
                     pos_hint: {'center_x':0.5, 'center_y':0.375}
-                    on_press: root.song()
+                    on_release: root.song()
                 MDLabel:
                     text: 'Wordiary'
                     theme_text_color: "Hint"
                     pos_hint: {'center_x':0.5, 'center_y':0.1}
-                    font_size: 15
+                    font_size: 45
                     halign: "center"
+
         MDNavigationDrawer:
             id: nav_drawer
             ContentNavigationDrawer:
@@ -169,38 +187,48 @@ ScreenManager:
     title: title
     FloatLayout:
         MDLabel:
-            text: "Date :"
+            text: "Date "
+            font_name: "VanillaExtractRegular.ttf"
             theme_text_color: 'Primary'
             pos_hint: {"center_x":0.25, "center_y":0.9625}
             halign: "center"
         MDLabel:
-            text: "Title :"
+            text: "Title "
+            font_name: "VanillaExtractRegular.ttf"
             theme_text_color: 'Primary'
             pos_hint: {"center_x":0.25, "center_y":0.9025}
             halign: "center"
         TextInput:
             id: date
+            font_name: "VanillaExtractRegular.ttf"
             multiline: False
-            hint_text: 'dd-mm-yyyy'
+            hint_text: 'DD-MM-YYYY'
             size_hint: 0.65, 0.05
             pos_hint: {"center_x":0.65, "center_y":0.965}
+            padding_y : [(self.height/2.0)-(self.line_height/2.0)*len(self._lines), 0]
         TextInput:
             id: title
+            font_name: "VanillaExtractRegular.ttf"
             multiline: False
             size_hint: 0.65, 0.05
             pos_hint: {"center_x":0.65, "center_y":0.905}
-        TextInput:
-            id: diary
-            multiline: True
+            padding_y : [(self.height/2.0)-(self.line_height/2.0)*len(self._lines), 0]
+        ScrollView:
+            id: scroller
             size_hint: 0.95, 0.855
             pos_hint: {"center_x":0.5, "center_y":0.4425}
+            TextInput:
+                id: diary
+                font_name: "VanillaExtractRegular.ttf"
+                multiline: True
+                size_hint: 1, None
+                height: max((len(self._lines)+1) * self.line_height, scroller.height)
         MDFillRoundFlatIconButton:
             icon: "plus-circle"
             text: 'Save'
             pos_hint: {'center_x':0.5, 'y':0.05}
             on_release:
                 root.save()
-
     MDIconButton:
         icon: "home-outline"
         pos_hint: {"center_x":0.075, "y":0.925}
@@ -210,37 +238,56 @@ ScreenManager:
             root.manager.current = 'main'
 
 <ContentNavigationDrawer>:
+    AnchorLayout:
+        anchor_x: "center"
+        size_hint_y: None
+        height: avatar.height
+        Image:
+            id: avatar
+            size_hint: None, None
+            size: "150dp", "150dp"
+            source: "brand.png"
     ScrollView:
         MDList:
-            OneLineListItem:
+            OneLineIconListItem:
                 text: "Home"
-                on_press:
+                on_release:
                     root.nav_drawer.set_state("close")
                     root.sm.transition.direction = "left"
                     root.sm.current = 'main'
-            OneLineListItem:
+                IconLeftWidget:
+                    icon: "home"
+            OneLineIconListItem:
                 text: "Diary"
-                on_press:
+                on_release:
                     root.nav_drawer.set_state("close")
                     root.sm.transition.direction = "left"
                     root.sm.current = root.diary()
-            OneLineListItem:
+                IconLeftWidget:
+                    icon: "book"
+            OneLineIconListItem:
                 text: "History"
-                on_press:
+                on_release:
                     root.nav_drawer.set_state("close")
                     root.sm.transition.direction = "left"
                     root.sm.current = root.history()
-            OneLineListItem:
+                IconLeftWidget:
+                    icon: "timelapse"
+            OneLineIconListItem:
                 text: "Settings"
-                on_press:
+                on_release:
                     root.nav_drawer.set_state("close")
                     root.sm.transition.direction = "left"
                     root.sm.current = 'settings'
-            OneLineListItem:
+                IconLeftWidget:
+                    icon: "settings"
+            OneLineIconListItem:
                 text: "About Us"
-                on_press:
+                on_release:
                     root.nav_drawer.set_state("close")
                     root.aboutus()
+                IconLeftWidget:
+                    icon: "information-outline"
 
 <HistoryScreen>:
     name: 'history'
@@ -260,6 +307,8 @@ ScreenManager:
                 MDLabel:
                     text: 'Cari diary-mu berdasarkan tanggal'
                     theme_text_color: "Primary"
+                    font_name: "VanillaExtractRegular.ttf"
+                    font_size: 50
                     pos_hint: {'center_x':0.5, 'center_y':0.6}
                     halign: 'center'
                 MDTextField:
@@ -267,13 +316,16 @@ ScreenManager:
                     hint_text: "Masukkan tanggal disini"
                     helper_text: "Gunakan format dd-mm-yyyy"
                     helper_text_mode: "on_focus"
+                    font_size: "20sp"
                     pos_hint:{'center_x': 0.5, 'center_y': 0.5}
                     size_hint_x:None
-                    width:300
+                    width:700
+                    halign: 'center'
+                    line_color_normal: 1,1,1,1
                 MDFlatButton:
                     text: 'SEARCH'
                     pos_hint: {'center_x':0.8, 'y':0.4}
-                    on_press:
+                    on_release:
                         root.search()
                         root.manager.transition.direction = "left"
                         root.manager.current = root.datechecking()
@@ -281,7 +333,7 @@ ScreenManager:
                     text: 'Wordiary'
                     theme_text_color: "Hint"
                     pos_hint: {'center_x':0.5, 'center_y':0.1}
-                    font_size: 15
+                    font_size: 45
                     halign: "center"
 
         MDNavigationDrawer:
@@ -309,7 +361,8 @@ ScreenManager:
         MDLabel:
             id: title
             text: ''
-            font_size: 20
+            font_name: "VanillaExtractRegular.ttf"
+            font_size: 60
             size_hint_y: 0.1
             theme_text_color: "Primary"
             halign: "left"
@@ -320,6 +373,8 @@ ScreenManager:
             MDLabel:
                 id: diarytext
                 text: ''
+                font_name: "VanillaExtractRegular.ttf"
+                font_size: 40
                 theme_text_color: "Primary"
                 pos_hint: {"center_x":0.5}
                 size_hint_y: None
@@ -330,7 +385,7 @@ ScreenManager:
             icon: "pencil"
             md_bg_color: app.theme_cls.primary_color
             pos_hint: {"center_x":0.85, "center_y":0.075}
-            on_press:
+            on_release:
                 root.edit()
                 root.manager.transition.direction = "up"
                 root.manager.current = 'diary'
@@ -375,7 +430,7 @@ ScreenManager:
                     text: 'Wordiary'
                     theme_text_color: "Hint"
                     pos_hint: {'center_x':0.5, 'center_y':0.1}
-                    font_size: 15
+                    font_size: 45
                     halign: "center"
 
         MDNavigationDrawer:
@@ -399,44 +454,71 @@ ScreenManager:
         hint_text: "Masukkan PIN"
         helper_text: "masukkan minimal 4 digit angka"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint: {'center_x': 0.5, 'center_y': 0.75}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.75}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            newpin.password = False if newpin.password is True else True
     MDTextField:
         id: confirmpin
         hint_text: "Konfirmasi PIN"
         helper_text: "harap konfirmasi pin anda"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint: {'center_x': 0.5, 'center_y': 0.65}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.65}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            confirmpin.password = False if confirmpin.password is True else True
     MDTextField:
         id: pertanyaan
         text: ''
-        hint_text: "Buat pertanyaan lupa pin"
-        helper_text: "Contoh : Berapakah jumlah mantan saya?"
+        hint_text: "Buat pertanyaan untuk lupa PIN"
+        helper_text: "contoh : Berapakah jumlah mantan saya?"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         pos_hint: {'center_x': 0.5, 'center_y': 0.55}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
     MDTextField:
         id: jawaban
         text: ''
         hint_text: "Buat jawaban dari pertanyaan diatas"
+        helper_text: "diperlukan untuk lupa PIN"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         pos_hint: {'center_x': 0.5, 'center_y': 0.45}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
     MDFlatButton:
         text: 'SIMPAN'
         pos_hint: {"center_x":0.8, "y":0.35}
-        on_press:
+        on_release:
             root.manager.transition.direction = 'right'
             root.manager.current = root.savepin()
             root.clear()
@@ -445,20 +527,21 @@ ScreenManager:
         pos_hint: {"center_x":0.075, "y":0.925}
         on_release:
             root.clear()
+            root.clearpertanyaan()
             root.manager.transition.direction = "right"
             root.manager.current = 'settings'
     MDLabel:
         id: aturulang
         text: ''
         theme_text_color: 'Primary'
-        font_size: 20
-        pos_hint: {'x':0.085, 'center_y':0.875}
-        halign: "left"
+        font_size: 60
+        pos_hint: {'center_y':0.875}
+        halign: "center"
     MDLabel:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <GantiPINScreen>:
@@ -467,15 +550,26 @@ ScreenManager:
     MDTextField:
         id: pin
         hint_text: "Masukkan PIN Anda"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint:{'center_x': 0.5, 'center_y': 0.5}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.5}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            pin.password = False if pin.password is True else True
     MDFlatButton:
         text: 'GANTI PIN'
         pos_hint: {'center_x':0.8, 'y':0.4}
-        on_press:
+        on_release:
             root.manager.current = root.ganti()
     MDIconButton:
         icon: "arrow-left"
@@ -488,7 +582,7 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <HapusPINScreen>:
@@ -497,15 +591,26 @@ ScreenManager:
     MDTextField:
         id: pin
         hint_text: "Masukkan PIN Anda"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint:{'center_x': 0.5, 'center_y': 0.5}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.5}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            pin.password = False if pin.password is True else True
     MDFlatButton:
         text: 'OKE'
         pos_hint: {'center_x':0.8, 'y':0.4}
-        on_press:
+        on_release:
             root.manager.transition.direction = "right"
             root.manager.current = root.hapus()
             root.clear()
@@ -520,7 +625,7 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <VerifyDiary>:
@@ -531,15 +636,26 @@ ScreenManager:
         hint_text: "Masukkan PIN Anda"
         helper_text: "Lupa pin? Pulihkan pin Anda di Settings"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint:{'center_x': 0.5, 'center_y': 0.5}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.5}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            pin.password = False if pin.password is True else True
     MDFlatButton:
         text: 'OKE'
         pos_hint: {'center_x':0.8, 'y':0.4}
-        on_press:
+        on_release:
             root.manager.current = root.submit()
             root.clear()
     MDIconButton:
@@ -553,7 +669,7 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <VerifyHistory>:
@@ -564,15 +680,26 @@ ScreenManager:
         hint_text: "Masukkan PIN Anda"
         helper_text: "Lupa pin? Pulihkan pin Anda di Settings"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         password: True
+        password_mask: "•"
         pos_hint:{'center_x': 0.5, 'center_y': 0.5}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
+    MDIconButton:
+        icon: "eye-off"
+        ripple_scale: .5
+        pos_hint: {'center_x': 0.8, 'center_y': 0.5}
+        #pos: text_field.width - self.width + dp(8), 0
+        on_release:
+            self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+            pin.password = False if pin.password is True else True
     MDFlatButton:
         text: 'OKE'
         pos_hint: {'center_x':0.8, 'y':0.4}
-        on_press:
+        on_release:
             root.manager.current = root.submit()
             root.clear()
     MDIconButton:
@@ -586,7 +713,7 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
 
 <LupaPin>:
@@ -597,21 +724,24 @@ ScreenManager:
         id: pertanyaan
         text: ''
         theme_text_color: 'Primary'
-        font_size: 20
+        font_size: 60
         pos_hint: {'center_x':0.5, 'center_y':0.65}
         halign: 'center'
     MDTextField:
         id: jawaban
         hint_text: "Masukkan Jawaban Anda"
+        helper_text: "masukkan jawaban untuk atur ulang PIN"
         helper_text_mode: "on_focus"
+        font_size: "20sp"
         pos_hint:{'center_x': 0.5, 'center_y': 0.5}
         size_hint_x:None
-        width:300
+        width:700
         halign: 'center'
+        line_color_normal: 1,1,1,1
     MDFlatButton:
         text: 'OKE'
         pos_hint: {'center_x':0.8, 'y':0.4}
-        on_press:
+        on_release:
             root.manager.current = root.lupapin()
             root.clear()
     MDIconButton:
@@ -625,8 +755,5 @@ ScreenManager:
         text: 'Wordiary'
         theme_text_color: "Hint"
         pos_hint: {'center_x':0.5, 'center_y':0.1}
-        font_size: 15
+        font_size: 45
         halign: "center"
-
-
-#semangat gais
