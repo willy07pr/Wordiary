@@ -3,8 +3,8 @@
 ## Paralel 1
 ## Kelompok 14
 ## Asisten Praktikum
-1 Indah Puspita (G64170035)
-2 Qoriatul Khairunnisa (G64170014)
+1. Indah Puspita (G64170035)
+2. Qoriatul Khairunnisa (G64170014)
 ## WiiDev-Team
 1 Ivana (G54190055) - Project Leader, Back-end Developer, UI/UX Designer
 2 Vindyani (G54190027) - Back-end Developer, UI/UX Designer
