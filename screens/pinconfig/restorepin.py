@@ -16,7 +16,7 @@ class LupaPin(Screen):
         self.pertanyaan.text = db.question()
 
     def lupapin(self):
-        if self.jawaban.text == db.forget():
+        if self.jawaban.text.lower() == db.forget().lower():
             self.manager.get_screen('buatpin').fill()
             return 'buatpin' #jika jawaban sesuai, arahkan untuk membuat pin ulang
         else:
