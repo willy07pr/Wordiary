@@ -34,14 +34,14 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 10. Sebagai pengguna yang ingin curhat, agar dapat mencurahkan semua isi hati saya, saya dapat menggunakan fitur diary untuk menuliskan unek-unek yang saya miliki.
 
 ## Spesifikasi Teknis Lingkungan Pengembangan
-Operating System        : Windows 10
-Text Editor 			      : Pycharm Edu
-Framework			          : Kivy, KivyMD
-Database			          : SQLite
-Library				          : Kivy Library
-Version Control System 	: Github
-Deployment			        : Buildozer, Virtual Box for Linux
-Lain-lain			          : SQLite3 (Adapter database to py)
+* Operating System        : Windows 10
+* Text Editor 			      : Pycharm Edu
+* Framework			          : Kivy, KivyMD
+* Database			          : SQLite
+* Library				          : Kivy Library
+* Version Control System 	: Github
+* Deployment			        : Buildozer, Virtual Box for Linux
+* Lain-lain			          : SQLite3 (Adapter database to py)
 
 ## Hasil dan Pembahasan
 ### Use Case Diagram
