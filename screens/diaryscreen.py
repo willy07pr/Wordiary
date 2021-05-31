@@ -16,7 +16,10 @@ class DiaryScreen(Screen):
 
     def save(self): #menyimpan diary
         # jika format tidak sesuai
-        if self.date.text[-4:].isnumeric()==False or len(self.date.text)!=10:
+        if not self.date.text[-4:].isnumeric() \
+                or len(self.date.text)!=10 \
+                or int(self.date.text[3:5])>12 \
+                or self.date.text[2:6:3] != '--':
             format = MDDialog(text='Gunakan format tanggal dd-mm-yyyy',
                               size_hint=(0.7,0.2))
             format.open()
@@ -29,13 +32,13 @@ class DiaryScreen(Screen):
             db.deletediary(self.date.text)
             db.insertdiary(self.diary.text, self.date.text,self.title.text)
             self.showtoast()
-        self.diary.text = ""
-        self.date.text = ""
-        self.title.text = ""
         self.manager.get_screen('history').clear()
 
     def showtoast(self):
-        toast("Diary berhasil disimpan",duration=0.5)
+        self.diary.text = ""
+        self.date.text = ""
+        self.title.text = ""
+        toast("Diary berhasil disimpan")
 
     def showdata(self,text,date,title): #menampilkan tulisan dari diary yang akan di edit
         self.diary.text = text
@@ -47,4 +50,3 @@ class DiaryScreen(Screen):
         self.date.text = ''
         self.title.text = ''
         self.manager.get_screen('history').clear()
-
