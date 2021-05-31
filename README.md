@@ -52,8 +52,23 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Entity Relationship Diagram
 ### Arsitektur Sistem
 ### Fungsi Utama Yang Dikembangkan
+* Fitur Buku Harian
+* Fitur Kata-Kata Penyemangat
+* Fitur Referensi Lagu
 ### Fungsi CRUD
-
+#### * Create
+1. Membuat pin
+2. Membuat buku harian
+#### * Read
+1. Mencari riwayat buku harian
+2. Membaca kata penyemangat
+3. Membaca referensi lagu
+#### * Update
+1. Mengganti pin
+2. Mengedit buku harian, 
+#### * Delete
+1. Menghapus pin
+2. Lupa pin
 ## Hasil Implementasi
 ### Screenshot Sistem
 ![WhatsApp Image 2021-05-26 at 11 51 32 (2)](https://user-images.githubusercontent.com/78713780/119606498-e711d780-be1c-11eb-828f-470e0f82d729.jpeg)
