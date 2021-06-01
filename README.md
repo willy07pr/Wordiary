@@ -57,30 +57,30 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Class Diagram
 ### Entity Relationship Diagram
 ### Arsitektur Sistem
-1. Ringkasan
-   Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan PostgreSQL. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan library KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
-2. Masalah
-   * Pengguna IOS tidak dapat menggunakan aplikasi ini karena aplikasi yang kami buat hanya berbasis Android. Masalah ini penting untuk dipecahkan agar aplikasi ini dapat digunakan khalayak secara lebih luas.
-   * Proses masuk aplikasi yang memakan waktu karena kodingan yang dibuat belum cukup efisien. Masalah ini penting untuk dipecahkan supaya pengguna dapat merasa lebih nyaman saat menggunakan aplikasi ini.
-3. Batasan
-   * Proyek pengembangan software yang kami buat hanya berfungsi di Android padahal ada klien yang menginginkan untuk menggunakan aplikasi ini di IOS.
-   * Proses masuk aplikasi yang cukup memakan waktu padahal klien menginginkan aplikasi yang responsif dan cepat. Hal ini terjadi karena penulisan codingan yang tidak efisien.
-4. Opsi
-   * Klien ingin menggunakan aplikasi ini di IOS.
-     Pro : Aplikasi ini dapat menjangkau khalayak secara lebih luas.
-     Kontra : Kami belum mengetahui cara mengonversi aplikasi ini dengan basis IOS.
-   * Klien menginginkan aplikasi yang responsif dan cepat.
-     Pro :
-     -Pengguna dapat menggunakan aplikasi ini dengan lebih nyaman.
-     -Pengevaluasi codingan akan lebih mudah dilakukan bila codingan ditulis dengan lebih ringkas.
-     Kontra :
-     -Memakan waktu lebih banyak untuk meringkas codingan yang sebenarnya sudah jadi.
-     -Ada kemungkinan terjadinya error setelah codingan tersebut diringkas.
-5. Rasional
-   * Klien ingin menggunakan aplikasi ini di IOS
-     Kami memilih opsi pro dengan beberapa pertimbangan. Apabila dirasa terlalu sulit untuk mengonversi aplikasi ini menjadi berbasis IOS, maka kami putuskan untuk tetap membiarkan aplikasi ini untuk tersedia di Android saja.
-   * Klien menginginkan aplikasi yang responsif dan cepat
-     Kami memilih opsi pro untuk meningkatkan kenyamanan pengguna dalam menggunakan aplikasi ini sehingga memacu pengguna tersebut untuk menggunakan aplikasi ini dalam jangka waktu yang lama
+#### Ringkasan
+Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan PostgreSQL. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan library KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
+#### Masalah
+* Pengguna IOS tidak dapat menggunakan aplikasi ini karena aplikasi yang kami buat hanya berbasis Android. Masalah ini penting untuk dipecahkan agar aplikasi ini dapat digunakan khalayak secara lebih luas.
+* Proses masuk aplikasi yang memakan waktu karena kodingan yang dibuat belum cukup efisien. Masalah ini penting untuk dipecahkan supaya pengguna dapat merasa lebih nyaman saat menggunakan aplikasi ini.
+#### Batasan
+* Proyek pengembangan software yang kami buat hanya berfungsi di Android padahal ada klien yang menginginkan untuk menggunakan aplikasi ini di IOS.
+* Proses masuk aplikasi yang cukup memakan waktu padahal klien menginginkan aplikasi yang responsif dan cepat. Hal ini terjadi karena penulisan codingan yang tidak efisien.
+#### Opsi
+##### Klien ingin menggunakan aplikasi ini di IOS.
+* Pro : Aplikasi ini dapat menjangkau khalayak secara lebih luas.
+* Kontra : Kami belum mengetahui cara mengonversi aplikasi ini dengan basis IOS.
+##### Klien menginginkan aplikasi yang responsif dan cepat.
+* Pro :
+  - Pengguna dapat menggunakan aplikasi ini dengan lebih nyaman.
+  - Pengevaluasi codingan akan lebih mudah dilakukan bila codingan ditulis dengan lebih ringkas.
+* Kontra :
+  - Memakan waktu lebih banyak untuk meringkas codingan yang sebenarnya sudah jadi.
+  - Ada kemungkinan terjadinya error setelah codingan tersebut diringkas.
+#### Rasional
+* Klien ingin menggunakan aplikasi ini di IOS
+  - Kami memilih opsi pro dengan beberapa pertimbangan. Apabila dirasa terlalu sulit untuk mengonversi aplikasi ini menjadi berbasis IOS, maka kami putuskan untuk tetap membiarkan aplikasi ini untuk tersedia di Android saja.
+* Klien menginginkan aplikasi yang responsif dan cepat
+  - Kami memilih opsi pro untuk meningkatkan kenyamanan pengguna dalam menggunakan aplikasi ini sehingga memacu pengguna tersebut untuk menggunakan aplikasi ini dalam jangka waktu yang lama
 
 ### Fungsi Utama Yang Dikembangkan
 * Fitur Buku Harian
