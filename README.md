@@ -58,7 +58,7 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Entity Relationship Diagram
 ### Arsitektur Sistem
 #### Ringkasan
-Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan PostgreSQL. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan library KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
+Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan SQLite. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
 #### Masalah
 * Pengguna IOS tidak dapat menggunakan aplikasi ini karena aplikasi yang kami buat hanya berbasis Android. Masalah ini penting untuk dipecahkan agar aplikasi ini dapat digunakan khalayak secara lebih luas.
 * Proses masuk aplikasi yang memakan waktu karena kodingan yang dibuat belum cukup efisien. Masalah ini penting untuk dipecahkan supaya pengguna dapat merasa lebih nyaman saat menggunakan aplikasi ini.
