@@ -1,6 +1,7 @@
 from kivy.uix.screenmanager import Screen
 from kivy.properties import ObjectProperty
 from kivymd.uix.dialog import MDDialog
+from kivymd.uix.picker import MDDatePicker
 from database import Database
 
 db = Database()
@@ -10,7 +11,16 @@ class HistoryScreen(Screen):
 
     searchdate = ObjectProperty(None)
     datelist = db.getdiarydate()
-    #print(datelist)
+    
+    def on_save(self, date):
+        temp_date = str(date)[8:]
+        temp_month = str(date)[5:7]
+        temp_year = str(date)[:4]
+        self.searchdate.text = temp_date + '-' + temp_month + '-' + temp_year
+        
+    def opencalendar(self):
+        calendar = MDDatePicker(callback=self.on_save)
+        calendar.open()
 
     def search(self):
         if not self.searchdate.text[-4:].isnumeric() \
