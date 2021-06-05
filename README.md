@@ -111,12 +111,16 @@ Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk mengguna
 ![CollageMaker_20210605_153813608](https://user-images.githubusercontent.com/67861610/120893427-82852280-c63d-11eb-97f3-8898db8c781b.jpg)
 
 ### Link Aplikasi
+https://drive.google.com/file/d/1kCx_L1CYJtuA3CBmNrAl_SUTElo3Clz3/view?usp=drivesdk
 
 ## Testing (Test Case)
 ### Positive Case and Negative Case
 ![Screenshot (349)](https://user-images.githubusercontent.com/67861610/120895849-0c86b880-c649-11eb-98f4-4fbc717022a6.png)
 
 ## Saran untuk Pengembangan Selanjutnya
+1. Pengembang selanjutnya dapat melakukan penyempurnaan ukuran tombol emotikon agar pada setiap perangkat memiliki ukuran yang sama.
+2. Pengembang selanjutnya dapat membuat UI/UX yang lebih menarik lagi agar lebih berwarna dan tidak membosankan.
+3. Pengembang selanjutnya dapat men-deploy aplikasi untuk iOS.
 
 ## Spesifikasi minimum
 * Android version : Lollipop v5.x or above
