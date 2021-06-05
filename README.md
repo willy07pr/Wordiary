@@ -104,11 +104,12 @@ Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk mengguna
 2. Lupa pin
 ## Hasil Implementasi
 ### Screenshot Sistem
+![CollageMaker_20210605_153634358](https://user-images.githubusercontent.com/67861610/120893443-8fa21180-c63d-11eb-8a93-142de4e0cd73.jpg)
+![CollageMaker_20210605_153653899](https://user-images.githubusercontent.com/67861610/120893440-8c0e8a80-c63d-11eb-92a1-8d65f1c5f4ed.jpg)
+![CollageMaker_20210605_153718520](https://user-images.githubusercontent.com/67861610/120893434-8749d680-c63d-11eb-802a-a6d294beb311.jpg)
 ![CollageMaker_20210605_153756182](https://user-images.githubusercontent.com/67861610/120893418-76996080-c63d-11eb-9c71-2b81cf8c612c.jpg)
 ![CollageMaker_20210605_153813608](https://user-images.githubusercontent.com/67861610/120893427-82852280-c63d-11eb-97f3-8898db8c781b.jpg)
-![CollageMaker_20210605_153718520](https://user-images.githubusercontent.com/67861610/120893434-8749d680-c63d-11eb-802a-a6d294beb311.jpg)
-![CollageMaker_20210605_153653899](https://user-images.githubusercontent.com/67861610/120893440-8c0e8a80-c63d-11eb-92a1-8d65f1c5f4ed.jpg)
-![CollageMaker_20210605_153634358](https://user-images.githubusercontent.com/67861610/120893443-8fa21180-c63d-11eb-8a93-142de4e0cd73.jpg)
+
 ### Link Aplikasi
 
 ## Testing (Test Case)
