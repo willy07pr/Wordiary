@@ -13,7 +13,6 @@ ScreenManagement:
     VerifyHistory:
     LupaPin:
 
-
 <MainScreen>:
     name: 'main'
     MDToolbar:
@@ -206,6 +205,14 @@ ScreenManagement:
             size_hint: 0.65, 0.05
             pos_hint: {"center_x":0.65, "center_y":0.965}
             padding_y : [(self.height/2.0)-(self.line_height/2.0)*len(self._lines), 0]
+        MDIconButton:
+            icon: "calendar"
+            theme_text_color: "Custom"
+            text_color: (33/255, 150/255, 243/255, 255/255)
+            ripple_scale: .5
+            pos_hint: {'center_x': 0.91, 'center_y': 0.965}
+            on_release:
+                root.opencalendar()
         TextInput:
             id: title
             font_name: "VanillaExtractRegular.ttf"
@@ -322,6 +329,12 @@ ScreenManagement:
                     width:700
                     halign: 'center'
                     line_color_normal: 1,1,1,1
+                MDIconButton:
+                    icon: "calendar"
+                    ripple_scale: .5
+                    pos_hint: {'center_x': 0.8, 'center_y': 0.5}
+                    on_release:
+                        root.opencalendar()
                 MDFlatButton:
                     text: 'SEARCH'
                     pos_hint: {'center_x':0.8, 'y':0.4}
