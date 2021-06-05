@@ -113,8 +113,8 @@ Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk mengguna
 ### Link Aplikasi
 
 ## Testing (Test Case)
-### Positive Case
-### Negative Case
+### Positive Case and Negative Case
+![Screenshot (349)](https://user-images.githubusercontent.com/67861610/120895849-0c86b880-c649-11eb-98f4-4fbc717022a6.png)
 
 ## Saran untuk Pengembangan Selanjutnya
 
