@@ -17,6 +17,9 @@ Pada masa pandemi, stress semakin sering dialami karena khawatir berlebihan dan 
 Aplikasi "Wordiary" merupakan aplikasi mobile berbasis android. Aplikasi ini ditargetkan untuk pengguna yang dirasa sulit untuk mencurahkan isi hatinya ke orang lain sehingga si pengguna dapat menggunakan fitur buku harian (note) yang disediakan pada aplikasi ini sebagai gantinya, baik ketika suasana hatinya sedang baik maupun buruk. Kami juga menargetkan pengguna dengan suasana hati yang sedang buruk dan membutuhkan kata-kata penyemangat juga saran lagu yang mungkin dapat meningkatkan mood atau suasana hati si pengguna.
 
 Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatkan mood mereka dengan fitur-fitur yang tersedia.
+### Spesifikasi minimum
+* Android version : Lollipop v5.x or above
+* Storage required : 25 MB
 
 ## User Analysis
 ### User Stories
@@ -53,36 +56,13 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Use Case Diagram
 ![WhatsApp Image 2021-05-31 at 11 50 42](https://user-images.githubusercontent.com/78886557/120141328-7bf24780-c206-11eb-8ba7-a8a4b8a8e7fc.jpeg)
 ### Activity Diagram
-![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
+
 ### Class Diagram
 ![AAAAAK](https://user-images.githubusercontent.com/67861610/120893365-20c4b880-c63d-11eb-801b-0534c68ab800.png)
 ### Entity Relationship Diagram
 ![ERD Diagram](https://user-images.githubusercontent.com/67861610/120893383-46ea5880-c63d-11eb-901e-f3e5d1faea5b.png)
 ### Arsitektur Sistem
-#### Ringkasan
-Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan SQLite. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
-#### Masalah
-* Pengguna IOS tidak dapat menggunakan aplikasi ini karena aplikasi yang kami buat hanya berbasis Android. Masalah ini penting untuk dipecahkan agar aplikasi ini dapat digunakan khalayak secara lebih luas.
-* Proses masuk aplikasi yang memakan waktu karena kodingan yang dibuat belum cukup efisien. Masalah ini penting untuk dipecahkan supaya pengguna dapat merasa lebih nyaman saat menggunakan aplikasi ini.
-#### Batasan
-* Proyek pengembangan software yang kami buat hanya berfungsi di Android padahal ada klien yang menginginkan untuk menggunakan aplikasi ini di IOS.
-* Proses masuk aplikasi yang cukup memakan waktu padahal klien menginginkan aplikasi yang responsif dan cepat. Hal ini terjadi karena penulisan codingan yang tidak efisien.
-#### Opsi
-##### Klien ingin menggunakan aplikasi ini di IOS.
-* Pro : Aplikasi ini dapat menjangkau khalayak secara lebih luas.
-* Kontra : Kami belum mengetahui cara mengonversi aplikasi ini dengan basis IOS.
-##### Klien menginginkan aplikasi yang responsif dan cepat.
-* Pro :
-  - Pengguna dapat menggunakan aplikasi ini dengan lebih nyaman.
-  - Pengevaluasi codingan akan lebih mudah dilakukan bila codingan ditulis dengan lebih ringkas.
-* Kontra :
-  - Memakan waktu lebih banyak untuk meringkas codingan yang sebenarnya sudah jadi.
-  - Ada kemungkinan terjadinya error setelah codingan tersebut diringkas.
-#### Rasional
-* Klien ingin menggunakan aplikasi ini di IOS
-  - Kami memilih opsi pro dengan beberapa pertimbangan. Apabila dirasa terlalu sulit untuk mengonversi aplikasi ini menjadi berbasis IOS, maka kami putuskan untuk tetap membiarkan aplikasi ini untuk tersedia di Android saja.
-* Klien menginginkan aplikasi yang responsif dan cepat
-  - Kami memilih opsi pro untuk meningkatkan kenyamanan pengguna dalam menggunakan aplikasi ini sehingga memacu pengguna tersebut untuk menggunakan aplikasi ini dalam jangka waktu yang lama
+![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
 
 ### Fungsi Utama Yang Dikembangkan
 * Fitur Buku Harian
@@ -122,6 +102,7 @@ https://drive.google.com/file/d/1kCx_L1CYJtuA3CBmNrAl_SUTElo3Clz3/view?usp=drive
 2. Pengembang selanjutnya dapat membuat UI/UX yang lebih menarik lagi agar lebih berwarna dan tidak membosankan.
 3. Pengembang selanjutnya dapat men-deploy aplikasi untuk iOS.
 
-## Spesifikasi minimum
-* Android version : Lollipop v5.x or above
-* Storage required : 25 MB
+## Dokumentasi
+https://trello.com/b/hXKCDk7k/wordiary
+https://github.com/willy07pr/Wordiary
+https://sites.google.com/view/wordiary/journal
