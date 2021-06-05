@@ -55,7 +55,9 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Activity Diagram
 ![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
 ### Class Diagram
+![AAAAAK](https://user-images.githubusercontent.com/67861610/120893365-20c4b880-c63d-11eb-801b-0534c68ab800.png)
 ### Entity Relationship Diagram
+![ERD Diagram](https://user-images.githubusercontent.com/67861610/120893383-46ea5880-c63d-11eb-901e-f3e5d1faea5b.png)
 ### Arsitektur Sistem
 #### Ringkasan
 Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk menggunakan SQLite. Untuk mengakses, meng-update data, merancang, dan memastikan aplikasi dapat berjalan, kami memutuskan untuk menggunakan bahasa pemrograman Python. Untuk merealisasikan UI/UX dari aplikasi, kami memutuskan untuk menggunakan framework Kivy dan KivyMD. Untuk mengonversi hasil pemrograman menjadi file aplikasi berbasis Android, kami memutuskan untuk menggunakan Buildozer yang berbasis Linux.
@@ -102,11 +104,11 @@ Untuk menyimpan, mengakses, dan meng-update data, kami memutuskan untuk mengguna
 2. Lupa pin
 ## Hasil Implementasi
 ### Screenshot Sistem
-![WhatsApp Image 2021-05-26 at 11 51 32 (2)](https://user-images.githubusercontent.com/78713780/119606498-e711d780-be1c-11eb-828f-470e0f82d729.jpeg)
-![WhatsApp Image 2021-05-26 at 11 51 32 (1)](https://user-images.githubusercontent.com/78713780/119606503-e8430480-be1c-11eb-8639-c51d98d16a50.jpeg)
-![WhatsApp Image 2021-05-26 at 11 51 32](https://user-images.githubusercontent.com/78713780/119606506-e8db9b00-be1c-11eb-9f11-d08de9412132.jpeg)
-![WhatsApp Image 2021-05-26 at 11 51 33 (1)](https://user-images.githubusercontent.com/78713780/119606507-e8db9b00-be1c-11eb-932a-ea0bf28b3cea.jpeg)
-![WhatsApp Image 2021-05-26 at 11 51 33](https://user-images.githubusercontent.com/78713780/119606508-e9743180-be1c-11eb-9cac-7ec7b3914725.jpeg)
+![CollageMaker_20210605_153756182](https://user-images.githubusercontent.com/67861610/120893418-76996080-c63d-11eb-9c71-2b81cf8c612c.jpg)
+![CollageMaker_20210605_153813608](https://user-images.githubusercontent.com/67861610/120893427-82852280-c63d-11eb-97f3-8898db8c781b.jpg)
+![CollageMaker_20210605_153718520](https://user-images.githubusercontent.com/67861610/120893434-8749d680-c63d-11eb-802a-a6d294beb311.jpg)
+![CollageMaker_20210605_153653899](https://user-images.githubusercontent.com/67861610/120893440-8c0e8a80-c63d-11eb-92a1-8d65f1c5f4ed.jpg)
+![CollageMaker_20210605_153634358](https://user-images.githubusercontent.com/67861610/120893443-8fa21180-c63d-11eb-8a93-142de4e0cd73.jpg)
 ### Link Aplikasi
 
 ## Testing (Test Case)
