@@ -103,6 +103,6 @@ https://drive.google.com/file/d/1kCx_L1CYJtuA3CBmNrAl_SUTElo3Clz3/view?usp=drive
 3. Pengembang selanjutnya dapat men-deploy aplikasi untuk iOS.
 
 ## Dokumentasi
-https://trello.com/b/hXKCDk7k/wordiary
-https://github.com/willy07pr/Wordiary
-https://sites.google.com/view/wordiary/journal
+* https://trello.com/b/hXKCDk7k/wordiary
+* https://github.com/willy07pr/Wordiary
+* https://sites.google.com/view/wordiary/journal
