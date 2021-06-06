@@ -56,6 +56,16 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ### Use Case Diagram
 ![WhatsApp Image 2021-05-31 at 11 50 42](https://user-images.githubusercontent.com/78886557/120141328-7bf24780-c206-11eb-8ba7-a8a4b8a8e7fc.jpeg)
 ### Activity Diagram
+#### Case : Random Word dan Referensi Lagu
+![randoman-Random Word+Lagu](https://user-images.githubusercontent.com/78886557/120921939-858d1b00-c6f0-11eb-8bd9-2013a152126c.png)
+#### Case : Random Word dan Tulis Diary
+![randoman-Random Word+Diary](https://user-images.githubusercontent.com/78886557/120921940-8756de80-c6f0-11eb-8e41-1bd00df54907.png)
+#### Case : Tulis Diary
+![randoman-Tulis Diary](https://user-images.githubusercontent.com/78886557/120921945-8aea6580-c6f0-11eb-81ff-fe16a5e414d5.png)
+#### Case : Buka History Diary
+![randoman-History Diary](https://user-images.githubusercontent.com/78886557/120921941-87ef7500-c6f0-11eb-8e8c-13c4f9c4a50a.png)
+#### Case : Buka Settings
+![randoman-Kelola Pin](https://user-images.githubusercontent.com/78886557/120921943-88880b80-c6f0-11eb-8a17-78103dec37ac.png)
 
 ### Class Diagram
 ![AAAAAK](https://user-images.githubusercontent.com/67861610/120893365-20c4b880-c63d-11eb-801b-0534c68ab800.png)
@@ -63,7 +73,6 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ![ERD Diagram](https://user-images.githubusercontent.com/67861610/120893383-46ea5880-c63d-11eb-901e-f3e5d1faea5b.png)
 ### Arsitektur Sistem
 ![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
-
 ### Fungsi Utama Yang Dikembangkan
 * Fitur Buku Harian
 * Fitur Kata-Kata Penyemangat
