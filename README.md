@@ -220,7 +220,7 @@ INSERT INTO Lagu VALUES('patah hati','https://youtu.be/MV_euZ_lKH8 ','Jodoh Past
 
 5. Create Table Diary
 
-CREATE TABLE Diary(tanggal VARCHAR(10), text VARCHAR(5000), judul VARCHAR(100));
+CREATE TABLE Diary(tanggal VARCHAR(10), textdiary VARCHAR(5000), judul VARCHAR(100));
 
 6. Create Table Pin
 
