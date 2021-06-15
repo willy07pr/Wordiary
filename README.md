@@ -71,6 +71,8 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ![AAAAAK](https://user-images.githubusercontent.com/67861610/120893365-20c4b880-c63d-11eb-801b-0534c68ab800.png)
 ### Entity Relationship Diagram
 ![ERD Diagram](https://user-images.githubusercontent.com/67861610/120893383-46ea5880-c63d-11eb-901e-f3e5d1faea5b.png)
+### Schematic Diagram
+![Schematic Diagram](https://user-images.githubusercontent.com/78713771/122032703-143d1e80-cdfa-11eb-9854-91a2690b5ebd.png)
 ### Arsitektur Sistem
 ![activity-diag](https://user-images.githubusercontent.com/78886557/120140575-09349c80-c205-11eb-9e96-76fca9911464.png)
 ### Fungsi Utama Yang Dikembangkan
@@ -178,43 +180,43 @@ CREATE TABLE Lagu(kondisi VARCHAR(10), link VARCHAR(40), judul VARCHAR(200));
 
 4. Input Data Table Lagu
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/0FiJfOviW4U','Membasuh - Hindia');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/0FiJfOviW4U ','Membasuh - Hindia');
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/k4V3Mo61fJM','Fix you - Coldplay');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/k4V3Mo61fJM ','Fix you - Coldplay');
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/nkJnteauOAY','Sudah - Ardhito Pramono');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/nkJnteauOAY ','Sudah - Ardhito Pramono');
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/L2XSg_8vNBE','Pelukku Untuk Pelikmu - Fiersa Bersari');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/L2XSg_8vNBE ','Pelukku Untuk Pelikmu - Fiersa Bersari');
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/qCN8tdHbs8c','Lekas-Tulus');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/qCN8tdHbs8c ','Lekas-Tulus');
 
-INSERT INTO Lagu VALUES('sedih','https://youtu.be/kcc9Kfip2uw','Secukupnya - Hindia');
+INSERT INTO Lagu VALUES('sedih','https://youtu.be/kcc9Kfip2uw ','Secukupnya - Hindia');
 
-INSERT INTO Lagu VALUES('marah','https://youtu.be/kHue-HaXXzg','Let It Go - Demi Lovato');
+INSERT INTO Lagu VALUES('marah','https://youtu.be/kHue-HaXXzg ','Let It Go - Demi Lovato');
 
-INSERT INTO Lagu VALUES('marah','https://youtu.be/_WyLVrtLhvk','Ya Sudahlah - Bondan Prakoso, Fade2Black');
+INSERT INTO Lagu VALUES('marah','https://youtu.be/_WyLVrtLhvk ','Ya Sudahlah - Bondan Prakoso, Fade2Black');
 
-INSERT INTO Lagu VALUES('marah','https://youtu.be/HHP5MKgK0o8','Kill em With Kindness - Selena Gomez');
+INSERT INTO Lagu VALUES('marah','https://youtu.be/HHP5MKgK0o8 ','Kill em With Kindness - Selena Gomez');
 
-INSERT INTO Lagu VALUES('marah','https://youtu.be/L2XSg_8vNBE','Pelukku Untuk Pelikmu - Fiersa Bersari');
+INSERT INTO Lagu VALUES('marah','https://youtu.be/L2XSg_8vNBE ','Pelukku Untuk Pelikmu - Fiersa Bersari');
 
-INSERT INTO Lagu VALUES('marah','https://youtu.be/2vjPBrBU-TM','Chandelier - Sia');
+INSERT INTO Lagu VALUES('marah','https://youtu.be/2vjPBrBU-TM ','Chandelier - Sia');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/Mgfe5tIwOj0','IDGAF - Dua Lipa');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/Mgfe5tIwOj0 ','IDGAF - Dua Lipa');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/k2qgadSvNyU','New Rules - Dua Lipa');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/k2qgadSvNyU ','New Rules - Dua Lipa');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/EEhZAHZQyf4','Thank You, Next - Ariana Grande');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/EEhZAHZQyf4 ','Thank You, Next - Ariana Grande');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/WA4iX5D9Z64','We Are Never Ever Getting Back Together - Taylor Swift');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/WA4iX5D9Z64 ','We Are Never Ever Getting Back Together - Taylor Swift');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/V-iqU4keqq0','Sudahkah? - Eclat');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/V-iqU4keqq0 ','Sudahkah? - Eclat');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/YncQyAb1xBQ','Lapang Dada - Sheila On 7');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/YncQyAb1xBQ ','Lapang Dada - Sheila On 7');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/lu1b04XPQv0','Untuk Hati Yang Terluka - Isyana Sarasvati');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/lu1b04XPQv0 ','Untuk Hati Yang Terluka - Isyana Sarasvati');
 
-INSERT INTO Lagu VALUES('patah hati','https://youtu.be/MV_euZ_lKH8','Jodoh Pasti Bertemu - Afgan');
+INSERT INTO Lagu VALUES('patah hati','https://youtu.be/MV_euZ_lKH8 ','Jodoh Pasti Bertemu - Afgan');
 
 5. Create Table Diary
 
