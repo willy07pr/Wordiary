@@ -104,11 +104,11 @@ Tujuan utama dari pengembangan aplikasi ini adalah membantu pengguna meningkatka
 ![CollageMaker_20210605_153813608](https://user-images.githubusercontent.com/67861610/120893427-82852280-c63d-11eb-97f3-8898db8c781b.jpg)
 
 ### Proses Implementasi Database
-1. Create Table Word
+1. Create Table named 'Word' (Administrator)
 
 CREATE TABLE Word(kondisi VARCHAR(5), teks VARCHAR(500));
 
-2. Input Data Table Word
+2. Insert Data to Word (Administrator)
 
 INSERT INTO Word VALUES('sedih', 'Percayalah bahwa Tuhan selalu adil. Dalam setiap kesedihan pasti akan muncul kebahagiaan.');
 
@@ -174,11 +174,11 @@ INSERT INTO Word VALUES('galau', 'It is okay if you thought you were over it, bu
 
 INSERT INTO Word VALUES('galau', 'This is how you love yourself. Instead of begging for the pain to go away, you choose to hear what your pain is begging of you and to make peace with your pain.');
 
-3. Create Table Lagu
+3. Create Table named 'Lagu' (Administrator)
 
 CREATE TABLE Lagu(kondisi VARCHAR(10), link VARCHAR(40), judul VARCHAR(200));
 
-4. Input Data Table Lagu
+4. Insert Data to Lagu (Administrator)
 
 INSERT INTO Lagu VALUES('sedih','https://youtu.be/0FiJfOviW4U ','Membasuh - Hindia');
 
@@ -218,13 +218,49 @@ INSERT INTO Lagu VALUES('patah hati','https://youtu.be/lu1b04XPQv0 ','Untuk Hati
 
 INSERT INTO Lagu VALUES('patah hati','https://youtu.be/MV_euZ_lKH8 ','Jodoh Pasti Bertemu - Afgan');
 
-5. Create Table Diary
+5. Create Table named 'Diary' (Administrator)
 
 CREATE TABLE Diary(tanggal VARCHAR(10), textdiary VARCHAR(5000), judul VARCHAR(100));
 
-6. Create Table Pin
+6. Create Table named 'Pin'(Administrator)
 
 CREATE TABLE Pin(userpin VARCHAR(15), pertanyaan VARCHAR(50), jawaban VARCHAR(50));
+
+7. Read Word (User)
+
+SELECT * FROM Word;
+
+8. Read Song References (User)
+
+SELECT * FROM Lagu;
+
+9. Insert Data to 'Diary'(User)
+
+f'INSERT INTO Diary VALUES({date!r},{text!r},{title!r});'
+
+10. Read Diary History (User)
+
+SELECT * FROM Diary;
+
+11. Update User Diary in 'Diary'(User)
+
+f'DELETE FROM Diary WHERE tanggal={recorddelete!r};'
+
+f'INSERT INTO Diary VALUES({date!r},{text!r},{title!r});'
+
+12. Insert User Pin to 'Pin'(User)
+
+f'INSERT INTO Pin VALUES({pin!r},{pertanyaan!r},{jawaban!r});'
+
+13. Delete User Pin (User)
+
+DELETE FROM Pin;
+
+14. Change User Pin (User)
+
+DELETE FROM Pin;
+
+f'INSERT INTO Pin VALUES({pin!r},{pertanyaan!r},{jawaban!r});'
 
 ### Link Aplikasi
 Klik [di sini](https://drive.google.com/file/d/1kCx_L1CYJtuA3CBmNrAl_SUTElo3Clz3/view?usp=drivesdk) untuk mendapatkan aplikasi Wordiary.
